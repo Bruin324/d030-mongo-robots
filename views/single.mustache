@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='./public/styles.css' </head>
+
+    <body>
+        <div class='user-wrapper'>
+            <div class='single-header'>
+                <img class='single-pic' src={{avatar}}>
+                <div class='single-header-detail'>
+                    <div class='single-name'>{{name}}</div>
+                    <div class='single-location'>
+                        {{^address.city}}
+                        <p>{{address.country}} | {{#company}}{{job}}, {{company}}{{/company}}{{^company}}Available for hire{{/company}}</p>
+                        {{/address.city}} 
+                        {{#address.city}}
+                        <p>{{address.city}},<a href="/country/{{address.country}}">{{address.country}}</a> | {{#company}}{{job}}, {{company}}{{/company}}{{^company}}Available
+                            for hire{{/company}}</p>
+                        {{/address.city}}
+                    </div>
+                    <div class='single-contact'>{{email}} | {{phone}}</div>
+                </div>
+            </div>
+            <div class='single-detail'>
+                {{#university}}
+                <div class="single-school">
+                    <div class='single-detail-tag'>Education</div>
+                    <div class="single-school-name">{{university}}</div>{{/university}}
+                </div>
+                <div class='single-skills'>
+                    <div class='single-detail-tag'>Skills</div>
+                    <ul>
+                        {{#skills}}
+                        <li><a href="/skills/{{.}}">{{.}}</a></li>{{/skills}}
+                    </ul>
+                </div>
+            </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Robot;
+    src: url(./retro_robot_xpaider.ttf);
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    font-family: Robot;
+}
+
+.filter-links {
+    font-family: Robot;
+    font-size: 24px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.filters {
+    font-family: Robot;
+    font-size: 20px;
+    text-align: center;
+}
+
+.users-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    width: calc(25% - 22px);
+    margin: 10px;
+    padding: 10px;
+    height: 300px;
+}
+
+.name {
+    color: #376DCA;
+    font-size: 26px;
+    font-weight: bolder;
+    margin: 0px;
+    text-align: center;
+}
+
+.avail {
+    color: #077F74
+}
+
+.thumbnail {
+    width: 70%;
+    margin: auto;
+}
+
+.hired {
+    color: gray;
+}
+
+/*//////////////////////
+Single Character Page
+//////////////////////*/
+
+.single-header {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    margin: 20px;
+}
+.single-pic {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    padding: 2px;
+    width: 175px;
+    height: 175px;
+}
+
+.single-header-detail {
+    margin-left: 20px;
+    width: calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.single-name {
+    font-size: 44px;
+    display: block;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.single-detail-tag {
+    font-weight: bolder;
+    text-align: right;
+    width: 175px;
+}
+
+.single-skills, .single-school {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.single-school-name {
+    padding-left: 30px;
+}
+
+.single-skills>ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 30px;
+}
+

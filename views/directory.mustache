@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='/public/styles.css'>
+</head>
+
+<body>
+    <div class="filter-links">
+        <a href="/">Show All Robots</a>
+        <a href="/unemployed">Show Only Unemployed Robots</a>
+        <a href="/employed">Show Only Employed Robots</a>
+    </div>
+    <div class="filters">
+        {{#filters}}
+        {{#country}}Showing only robots from {{country}}{{/country}}
+        {{#skill}}Showing only robots skilled in {{skill}}{{/skill}} 
+        {{/filters}}
+    </div>
+    <div class=users-wrapper>
+        {{#users}}
+        <div class="user-card">
+            <img class='thumbnail' src={{avatar}}>
+            <a class='name' href='/{{id}}'>{{name}}</a> {{#job}}
+            <p class='hired'>{{job}}, {{company}}</p>
+            {{/job}} {{^job}}
+            <p class='avail'>Available for hire</p>
+            {{/job}}
+        </div>
+        {{/users}}
+    </div>
+</body>
+
+</html>
